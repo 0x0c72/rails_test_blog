@@ -1,12 +1,10 @@
-<br />
-<br />
 <h1>Listing Articles</h1>
 <%= link_to 'New article', new_article_path %>
 	<% if @articles.size == 0 %>
                 <p><em>No Articles Found </em></p>
         <% else @articles.each do |article| %>
 
-		<table>
+		<table class="table">
 			<tr>
 				<th>Title</th>
 				<th>Text</th>
