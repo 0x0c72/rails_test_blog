@@ -8,8 +8,10 @@
 </p>
 
 <h2>Comments</h2>
-<%= render @article.comments %>
-
+<%= render @article.comments if @article.comments.size > 0 %>
+<% if @article.comments.size == 0 %>
+	<p>No Comments to Display</p>
+<% end %>
 <h2>Add a comment:</h2>
 <%= render "comments/form" %>
 
